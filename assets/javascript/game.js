@@ -19,15 +19,16 @@ function Character(charName, healthPoints, attackPower, counterPower) {
     // Method to display each object on browser
     this.displayCharacter = function(idName) {
         $(document).ready(function(){
+            var div = "<div>"; 
             // Create div with unique ID for every character
-            $("<div></div>").attr("id", idName).appendTo("#selectChar");
+            $(div).attr("id", idName).appendTo("#selectChar");
             // Create charName, charName and charHealth div for every char
-            $("<div></div>").addClass("charName").appendTo("#" + idName);
-            $("<div></div>").addClass("charImage").appendTo("#" + idName);
-            $("<div></div>").addClass("charHealth").appendTo("#" + idName);
+            $(div).addClass("charName").appendTo("#" + idName);
+            $(div).addClass("charImage").appendTo("#" + idName);
+            $(div).addClass("charHealth").appendTo("#" + idName);
             // Add name, picture and health points to divs created before
             $("#" + idName + " .charName").text(self.charName);
-            $("#" + idName + " .charImage").append("<img />");
+            $("#" + idName + " .charImage").append("<img/>");
             $("#" + idName + " .charImage img").attr("alt", "Character " + self.charName);
             $("#" + idName + " .charImage img").attr("src", imageDir + self.charName + ".png");
         });
