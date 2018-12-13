@@ -3,11 +3,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Homework 04: jQuery Game</title>
 </head>
+
 <body>
-    <div class="selectSection" id="selectChar"></div>
+    <div class="messages">
+        <p>GAME LOG: <span>Please select player to start</span></p>
+    </div>
+    
+    <div class="select-section" id="select-char"></div>
+    <div class="fight-section" id="fight-arena">
+        <div class="selectedplayer">Your Character<div class="player"></div></div> 
+        <div class="attack">
+            <img src="assets/images/attack.png" alt="Attack Button">
+        </div>
+        <div class="selectedenemy">Your Character
+            <div class="enemy"></div>
+        </div> 
+    </div>
+    <div class="enemy-section" id="select-enemy"></div>
     <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>
